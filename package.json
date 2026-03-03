@@ -1,0 +1,11 @@
+{
+  "name": "backendwithexpress",
+  "version": "1.0.0",
+  "description": "localyoutube",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start"
+  },
+  "author": "premchand",
+  "license": "ISC"
+}
