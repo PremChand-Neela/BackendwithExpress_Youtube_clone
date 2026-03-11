@@ -14,10 +14,10 @@ router.use(verifyJWT);
 
 router
     .route("/c/:channelId")
-    .get(checkValidObjectId(['channelId']), getSubscribedChannels)
+    .get(checkValidObjectId(['channelId']), getUserChannelSubscribers)
     .post(checkValidObjectId(['channelId']), toggleSubscription);
 
 router.route("/u/:subscriberId")
-    .get(checkValidObjectId(['subscriberId']), getUserChannelSubscribers);
+    .get(checkValidObjectId(['subscriberId']), getSubscribedChannels);
 
 export default router;

@@ -24,7 +24,7 @@ router
     .patch(checkValidObjectId(["playlistId"]),updatePlaylist)
     .delete(checkValidObjectId(["playlistId"]),deletePlaylist);
 
-router.route("/add/:videoId/:playlistId").patch( checkValidObjectId(["videoId","playlistId"]) , addVideoToPlaylist);
-router.route("/remove/:videoId/:playlistId").patch(checkValidObjectId(["videoId", "playlistId"]),removeVideoFromPlaylist);
+router.route("/add/:playlistId/:videoId").patch( checkValidObjectId(["playlistId","videoId"]) , addVideoToPlaylist);
+router.route("/remove/:playlistId/:videoId").patch(checkValidObjectId(["playlistId", "videoId"]),removeVideoFromPlaylist);
 
 export default router
